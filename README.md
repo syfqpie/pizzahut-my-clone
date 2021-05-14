@@ -2,7 +2,8 @@
 &gt; This is a Pizza hut MY clone app. I did this because I was bored, and I find this app is simple and easy to use.
 
 [🚀 **Demo link**](https://demo.com)
-![Alt text](misc/screenshot.PNG?raw=true "Screenshot")
+
+<!-- ![Alt text](misc/screenshot.PNG?raw=true "Screenshot") -->
 
 ## Features
 - (**WIP**) TBA

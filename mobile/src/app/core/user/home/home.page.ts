@@ -11,7 +11,7 @@ export class HomePage implements OnInit {
 
   // Data
   user = {
-    'name': 'Syafiq'
+    'name': 'John'
   }
 
   // Image
