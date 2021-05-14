@@ -1,0 +1,82 @@
+<ion-header>
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/settings" 
+				mode="ios" 
+				text=""
+				[disabled]="isWaiting">
+			</ion-back-button>
+		</ion-buttons>
+		<ion-title class="ion-text-center">Feed Us Back</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="page-container">
+		<p class="hint">
+			You may contact our hotline <span>{{ config.hotline }}</span> 
+			(General Inquiries & Feedback).
+		</p>
+
+		<p class="hint">
+			Customer feedback is an important way for 
+			us to improve our services. We would like to 
+			hear your feedback to our company and our 
+			services. 
+		</p>
+
+		<ion-item lines="none" class="item-card">
+			<ion-icon name="id-card-outline" slot="start"></ion-icon>
+			<ion-label>
+				<h3>
+					{{ user?.name }}
+				</h3>
+				<p class="hint">
+					{{ user?.email }}
+				</p>
+				<p class="hint">
+					{{ user?.phone }}
+				</p>
+			</ion-label>
+		</ion-item>
+
+		<form [formGroup]="feedbackForm">
+			<ion-item lines="none" class="item-input-card">
+				<ion-label position="stacked">Enter your message</ion-label>
+				<ion-textarea 
+					autoGrow
+					formControlName="message"
+					maxlength="255" 
+					placeholder="Let us know your thoughts" 
+					(ionChange)="checker($event)"
+					[disabled]="isWaiting"
+					[ngClass]="{
+						'error-active': feedbackForm.get('message').invalid && (feedbackForm.get('message').dirty || feedbackForm.get('message').touched)
+					}">
+				</ion-textarea>
+				<ion-text class="hint-counter">
+					<div class="validation-errors">
+						<ng-container *ngFor="let message of formMessages.message">
+							<div 
+								class="error-message"
+								*ngIf="feedbackForm.get('message').hasError(message.type) && (feedbackForm.get('message').dirty || feedbackForm.get('message').touched)"
+							>
+								{{ message.message }}
+							</div>
+						</ng-container>
+					</div>
+					<span *ngIf="feedbackForm.value.message">{{ feedbackForm?.value?.message?.length }}</span>
+					<span *ngIf="!feedbackForm.value.message">0</span>/255
+				</ion-text>
+			</ion-item>
+		</form>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button expand="block" [disabled]="!feedbackForm.valid">
+		<span *ngIf="!isWaiting">Submit</span>
+		<ion-spinner *ngIf="isWaiting" name="dots"></ion-spinner>
+	</ion-button>
+</ion-footer>

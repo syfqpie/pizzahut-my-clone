@@ -1,0 +1,75 @@
+// Header
+ion-header {
+    &.header-md:after {
+    --box-shadow: none !important;
+      background: #e2e2e2;
+      box-shadow: none !important;
+      height: 2px;
+    }
+    ion-toolbar {
+        ion-buttons {
+            ion-back-button {
+                --color: #000;
+            }
+        }
+    }
+}
+// ion-toolbar {
+//     --border-color: red;
+//     --border-style: solid;
+//     --border-width: 1px; 
+// }
+
+// Content
+ion-content {
+    --background: #f9f9f9;
+}
+
+// Button
+ion-button {
+    --border-radius: 5px !important;
+    --box-shadow: none;
+    font-weight: 600 !important;
+    text-transform: none !important;
+}
+
+// List
+ion-list {
+    background: transparent !important;
+    ion-list-header {
+        --background: none;
+        ion-label {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    ion-item.item-card {
+        --background: #fff;
+        --border-color: #e1e1e1 !important;
+        --border-radius: 5px !important;
+        --border-style: solid !important;
+        --border-width: 1px !important;
+        --detail-icon-opacity: 1 !important;
+        --padding-start: 10px;
+        margin-bottom: 5px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+// Tab
+ion-tab-button {
+    --color-selected: #eb445a;
+}
+
+// Footer
+ion-footer {
+    --background: #f9f9f9;
+    background: #f9f9f9;
+    padding: 10px !important;
+    ion-button {
+        --background: #2dd36f !important;
+    }
+}

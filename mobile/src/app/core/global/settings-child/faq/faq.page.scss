@@ -1,0 +1,22 @@
+ion-card.accordian-card {
+    --background: #fff !important;
+    --box-shadow: none !important;
+    // --padding-start: 10px !important;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 0.85rem !important;
+
+    ion-card-header {
+        background: #f9f9f9;
+        border-bottom: 1px solid #e1e1e1;
+        ion-item {
+            --background: #f9f9f9;
+        }
+    }
+
+    ion-card-content {
+        padding: 16px !important;
+        // display: flex;
+    }
+}

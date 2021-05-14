@@ -1,0 +1,54 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-title class="ion-text-center">Logo goes here</ion-title>
+		<ion-buttons slot="end">
+			<ion-button>
+				<ion-icon slot="start" name="cart-outline" color="danger" size="large"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-list-header lines="none">
+			<ion-label>Account and Settings 👌</ion-label>
+		</ion-list-header>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/account/')">
+			<ion-label>My Account</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/order-tracker/')">
+			<ion-label>Order tracker</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/order-history/')">
+			<ion-label>Order History</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/coupons/')">
+			<ion-label>My Coupons</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/vouchers/')">
+			<ion-label>Buy Vouchers</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/rewards/')">
+			<ion-label>Hut Rewards</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/faq/')">
+			<ion-label>FAQ's</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card" (click)="navigatePage('/settings/contact/')">
+			<ion-label>Contact Us</ion-label>
+		</ion-item>
+	</ion-list>
+	
+	<ion-text class="ion-text-center">
+		<h5>Version: {{ appVersion }}</h5>
+	</ion-text>
+</ion-content>

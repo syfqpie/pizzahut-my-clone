@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/settings" 
+				mode="ios" 
+				text="">
+			</ion-back-button>
+		</ion-buttons>
+		<ion-title class="ion-text-center">FAQs</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+	<ion-card
+		*ngFor="let faq of faqs; let i = index;" 
+		class="accordian-card" 
+		button
+		(click)="toggleSelection(i)"
+	>
+		<ion-card-header class="ion-no-padding ion-padding-start">
+			<ion-item lines="none" class="ion-no-padding">
+				<ion-icon slot="end" name="add-outline" *ngIf="!faq.open" color="danger"></ion-icon>
+				<ion-icon slot="end" name="remove-outline" *ngIf="faq.open" color="danger"></ion-icon>
+				<ion-label class="ion-text-wrap">
+					{{ faq.question }}
+				</ion-label>
+			</ion-item>
+		</ion-card-header>
+
+		<ion-card-content class="ion-text-wrap ion-justify-content-between" *ngIf="faq.open">
+      		<div [innerHTML]="faq.answer"></div>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
