@@ -1,0 +1,45 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-img class="ion-text-center img-logo" [src]="imgLogo"></ion-img>
+		<ion-buttons slot="end">
+			<ion-button>
+				<ion-icon slot="start" name="cart-outline" color="danger" size="large"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-img [src]="imgBanner"></ion-img>
+
+	<ion-list>
+		<ion-list-header lines="none">
+			<ion-label>
+				<h3>Welcome back {{ user.name }}! 🍕</h3>
+				<p>Select Delivery or Tapau to see local deals</p>
+			</ion-label>
+		</ion-list-header>
+
+		<ion-item lines="none" detail class="item-card">
+			<ion-thumbnail slot="start">
+				<img [src]="iconDelivery">
+			</ion-thumbnail>
+
+			<ion-label>
+				<h4>Delivery</h4>
+				<p>Choose your location</p>
+			</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail class="item-card">
+			<ion-thumbnail slot="start">
+				<img [src]="iconTapau">
+			</ion-thumbnail>
+			
+			<ion-label>
+				<h4>Tapau</h4>
+				<p>Find your nearest Hut</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

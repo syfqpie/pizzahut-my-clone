@@ -7,6 +7,9 @@ ion-header {
       height: 2px;
     }
     ion-toolbar {
+        ion-img.img-logo {
+            height: 25px;
+        }
         ion-buttons {
             ion-back-button {
                 --color: #000;

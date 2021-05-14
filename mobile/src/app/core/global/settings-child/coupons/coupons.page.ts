@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CouponsPage implements OnInit {
 
+  // Image
+  imgLogo = 'assets/img/logo/logo_main.png'
+
   constructor() { }
 
   ngOnInit() {

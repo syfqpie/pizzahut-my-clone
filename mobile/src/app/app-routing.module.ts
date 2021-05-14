@@ -38,6 +38,10 @@ const routes: Routes = [
         loadChildren: () => import('./core/global/settings-child/contact/contact.module').then(m => m.ContactPageModule)
       },
     ]
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./core/user/home/home.module').then( m => m.HomePageModule)
   }
   // {
   //   path: 'settings',
