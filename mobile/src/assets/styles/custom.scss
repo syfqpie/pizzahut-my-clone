@@ -60,6 +60,28 @@ ion-list {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+    ion-item.slide-banner-card {
+        --background: transparent;
+        --inner-padding-end: 0 !important;
+        --padding-start: 0 !important;
+        --padding-end: 0 !important;
+        --padding-top: 0 !important;
+        --padding-bottom: 0 !important;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        ion-slides {
+            background: transparent;
+            padding: 0 !important;
+            ion-slide {
+                background: #fff;
+                border: 1px solid #e1e1e1 !important;
+                border-radius: 5px !important;
+                padding: 0 !important;
+                margin-right: 10px;
+            }
+        }
+    }
 }
 
 // Tab
