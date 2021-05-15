@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-system-layout',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemLayoutPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  navigatePage(path: string) {
+    return this.router.navigate([path])
   }
 
 }

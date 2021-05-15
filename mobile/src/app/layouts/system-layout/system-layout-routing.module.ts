@@ -5,7 +5,7 @@ import { SystemLayoutPage } from './system-layout.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'user',
     component: SystemLayoutPage,
     children: [
       {
@@ -13,8 +13,8 @@ const routes: Routes = [
         loadChildren: () => import('../../core/user/home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'menu',
+        loadChildren: () => import('../../core/user/menu/menu.module').then(m => m.MenuPageModule)
       },
       {
         path: 'coupons',
@@ -26,14 +26,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/user/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/user/home',
     pathMatch: 'full'
   }
 ];

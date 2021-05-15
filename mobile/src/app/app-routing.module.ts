@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./core/user/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./core/user/menu/menu.module').then( m => m.MenuPageModule)
   }
   // {
   //   path: 'settings',
