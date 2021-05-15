@@ -13,6 +13,8 @@ export class HomePage implements OnInit {
   user = {
     'name': 'John'
   }
+  promos = [0,1,2,3,4,5,6]
+  menus = [0,1,2,3]
 
   // Image
   imgBanner = 'https://static.phdvasia.com/sg1/banners/phdv-1618787866982-KRP%20HERO%20BANNER_782x256_APP.png'
