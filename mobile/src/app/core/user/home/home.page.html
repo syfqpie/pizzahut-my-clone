@@ -12,7 +12,7 @@
 <ion-content>
 	<ion-img [src]="imgBanner"></ion-img>
 
-	<ion-list>
+	<ion-list class="ion-padding-bottom">
 		<ion-list-header lines="none">
 			<ion-label>
 				<h3>Welcome back {{ user.name }}! 🍕</h3>
@@ -41,5 +41,38 @@
 				<p>Find your nearest Hut</p>
 			</ion-label>
 		</ion-item>
+
+		<ion-list-header lines="none">
+			<ion-label>
+				<h5>Hot promos</h5>
+			</ion-label>
+		</ion-list-header>
+
+		<ion-item lines="none" class="slide-banner-card">
+			<ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+				<ion-slide *ngFor="let promo of promos" style="width: 250px; height: 200px;">
+					<ion-img style="pointer-events:none" src="https://via.placeholder.com/150"></ion-img>
+				</ion-slide>
+			</ion-slides>
+		</ion-item>
+
+		<ion-list-header lines="none">
+			<ion-label>
+				<h5>Menu</h5>
+			</ion-label>
+		</ion-list-header>
+
+		<ion-item lines="none" class="slide-menu-card">
+			<ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+				<ion-slide *ngFor="let menu of menus" style="width: 150px;">
+					<ion-card class="ion-no-padding">
+						<ion-img class="ion-no-padding" style="pointer-events:none" src="https://via.placeholder.com/150"></ion-img>
+						<ion-card-header>
+							<ion-card-subtitle>Name</ion-card-subtitle>
+						</ion-card-header>
+					</ion-card>
+				</ion-slide>
+			</ion-slides>
+		</ion-item>		
 	</ion-list>
 </ion-content>
